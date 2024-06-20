@@ -1,0 +1,43 @@
+###
+### A complete description of a Prefect Deployment for flow 'hello-world'
+###
+name: hello-deployment
+description: null
+version: 40ab6c8b276928f7d0bfae53bc69c561
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+schedules: []
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process #could be cloud
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
+storage: null
+path: /home/umesh/Code/my-scripts/prefect-playground
+entrypoint: hello.py:hello_world
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2024-06-20T03:58:50.593473+00:00'
+triggers: []
+enforce_parameter_schema: null
