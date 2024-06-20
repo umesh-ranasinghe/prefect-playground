@@ -1,9 +1,9 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'hello-world'
 ###
-name: hello-deployment
+name: hello-deployment-github
 description: null
-version: 40ab6c8b276928f7d0bfae53bc69c561
+version: d35593a160b4d060c127eed3296dcaba
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
@@ -14,7 +14,7 @@ schedules: []
 is_schedule_active: null
 infra_overrides: {}
 infrastructure:
-  type: process #could be cloud
+  type: process
   env: {}
   labels: {}
   name: null
@@ -29,8 +29,16 @@ infrastructure:
 ###
 flow_name: hello-world
 manifest_path: null
-storage: null
-path: /home/umesh/Code/my-scripts/prefect-playground
+storage:
+  repository_url: git@github.com:umesh-ranasinghe/prefect-playground.git
+  reference: null
+  credentials: null
+  _block_document_id: 5b77ae3f-9e55-4ee7-a9d4-cffde3e2cd67
+  _block_document_name: prefect-github-repo
+  _is_anonymous: false
+  block_type_slug: github-repository
+  _block_type_slug: github-repository
+path: ''
 entrypoint: hello.py:hello_world
 parameter_openapi_schema:
   title: Parameters
@@ -38,6 +46,6 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2024-06-20T03:58:50.593473+00:00'
+timestamp: '2024-06-20T06:08:00.877928+00:00'
 triggers: []
 enforce_parameter_schema: null
